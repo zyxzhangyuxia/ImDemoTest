@@ -32,12 +32,12 @@
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_big_media_custom.xml"
     },
     {
-        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\layout\\design_text_input_password_icon.xml",
-        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout\\design_text_input_password_icon.xml"
-    },
-    {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\layout\\nim_message_activity_actions_layout.xml",
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\layout\\nim_message_activity_actions_layout.xml"
+    },
+    {
+        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\layout\\design_text_input_password_icon.xml",
+        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout\\design_text_input_password_icon.xml"
     },
     {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\layout\\abc_search_dropdown_item_icons_2line.xml",

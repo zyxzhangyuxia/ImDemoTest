@@ -14,6 +14,7 @@ import com.kykj.im.demotest.cache.DemoCache;
 import com.kykj.im.demotest.cache.MessageEvent;
 import com.kykj.im.demotest.utils.LogUtil;
 import com.kykj.im.demotest.utils.MD5;
+import com.kykj.im.demotest.utils.ToastUtils;
 import com.netease.nim.uikit.permission.MPermission;
 import com.netease.nim.uikit.session.constant.Extras;
 import com.netease.nimlib.sdk.AbortableFuture;
@@ -67,6 +68,7 @@ public class MainPresenter {
             @Override
             public void onFailed(int code) {
                 LogUtil.D("onFailed.code = "+code);
+                ToastUtils.showMsg(context,context.getResources().getString(R.string.login_fail));
             }
 
             @Override

@@ -32,12 +32,12 @@
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\drawable\\nim_progress_bar_foreground.xml"
     },
     {
-        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_emoji_item_selector.xml",
-        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\drawable\\nim_emoji_item_selector.xml"
-    },
-    {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_emoji_item_selector.xml",
+        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\drawable\\nim_emoji_item_selector.xml"
     },
     {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
@@ -124,12 +124,12 @@
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\drawable\\nim_picker_preview_btn_selector.xml"
     },
     {
-        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_cancel_record_red_bg.xml",
-        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\drawable\\nim_cancel_record_red_bg.xml"
-    },
-    {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_team_member_add_selector.xml",
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\drawable\\nim_team_member_add_selector.xml"
+    },
+    {
+        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_cancel_record_red_bg.xml",
+        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\drawable\\nim_cancel_record_red_bg.xml"
     },
     {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\drawable\\nim_progress_small_white.xml",

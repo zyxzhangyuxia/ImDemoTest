@@ -7,10 +7,18 @@ package com.kykj.im.demotest.cache;
 
 public class MessageEvent {
     public static final String TAG_LOGIN_SUCCESS = "tag_login_success";
+    public static final String TAG_ADD_FRIEND_SUCCESS = "tag_add_friend_success";
+    public static final String TAG_DELETE_FRIEND_SUCCESS = "tag_delete_friend_success";
 
     private String eventTag;
+    private Object object;
 
-    public MessageEvent(String tagLoginSuccess) {
+    public MessageEvent(){}
+
+    public MessageEvent(String eventTag) {
+    }
+
+    public MessageEvent(String eventTag,Object object) {
     }
 
     public String getEventTag() {
@@ -21,10 +29,12 @@ public class MessageEvent {
         this.eventTag = eventTag;
     }
 
-    @Override
-    public String toString() {
-        return "MessageEvent{" +
-                "eventTag='" + eventTag + '\'' +
-                '}';
+    public Object getObject() {
+        return object;
     }
+
+    public void setObject(Object object) {
+        this.object = object;
+    }
+
 }

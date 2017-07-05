@@ -136,12 +136,12 @@
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\drawable\\nim_nim_action_bar_button_selector.xml"
     },
     {
-        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\drawable\\notification_icon_background.xml",
-        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable\\notification_icon_background.xml"
-    },
-    {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\drawable\\nim_actionbar_black_bg.xml",
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\drawable\\nim_actionbar_black_bg.xml"
+    },
+    {
+        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\drawable\\notification_icon_background.xml",
+        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable\\notification_icon_background.xml"
     },
     {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\drawable\\abc_ic_clear_material.xml",
@@ -168,12 +168,12 @@
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\drawable\\sample_footer_loading_progress.xml",
-        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res-ptr2\\drawable\\sample_footer_loading_progress.xml"
-    },
-    {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\drawable\\nim_message_item_left_selector.xml",
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\drawable\\nim_message_item_left_selector.xml"
+    },
+    {
+        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\drawable\\sample_footer_loading_progress.xml",
+        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res-ptr2\\drawable\\sample_footer_loading_progress.xml"
     },
     {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\release\\drawable\\nim_message_view_bottom.xml",

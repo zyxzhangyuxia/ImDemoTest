@@ -11,15 +11,20 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
 import com.kykj.im.demotest.R;
+import com.kykj.im.demotest.cache.MessageEvent;
 import com.kykj.im.demotest.javabean.MsgBean;
 import com.kykj.im.demotest.presenter.MainPresenter;
-import com.kykj.im.demotest.ui.fragment.DummySectionFragment;
+import com.kykj.im.demotest.ui.fragment.ContactsFrament;
+import com.kykj.im.demotest.ui.fragment.LiveRoomFrament;
+import com.kykj.im.demotest.ui.fragment.MsgFrament;
 import com.kykj.im.demotest.utils.ToastUtils;
 import com.kykj.im.demotest.weight.ActionItem;
 import com.kykj.im.demotest.weight.TitlePopup;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,12 +41,14 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
     ImageView iv_menu;
 
-    List<MsgBean> msgBeanList = new ArrayList<>();
+    List<MsgBean> msgBeanList = new ArrayList<>();//消息列表
+    List<Fragment> fragmentList = new ArrayList<>();//页面列表
 
     TitlePopup titlePopup;
 
     private MainPresenter mainPresenter;
     private Context context;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,26 +56,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         setContentView(R.layout.sample_main);
         initPopMenu();
         initVal();
-        final ActionBar actionBar = getActionBar();
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager) findViewById(R.id.pager);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
-        mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-            @Override
-            public void onPageSelected(int position) {
-                actionBar.setSelectedNavigationItem(position);
-            }
-        });
-
-        for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
-            actionBar.addTab(
-                    actionBar.newTab()
-                            .setText(mSectionsPagerAdapter.getPageTitle(i))
-                            .setTabListener(this));
-        }
-
+        initActionBar();
         iv_menu = (ImageView) findViewById(R.id.iv_menu);
         iv_menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,6 +64,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 titlePopup.show(v);
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     @Override
@@ -99,10 +92,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
         @Override
         public Fragment getItem(int position) {
-            Fragment fragment = new DummySectionFragment(setMsgListData());
-            Bundle args = new Bundle();
-            args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-            fragment.setArguments(args);
+            Fragment fragment = fragmentList.get(position);
+//            Fragment fragment = new DummySectionFragment(setMsgListData());
+//            Bundle bundle = new Bundle();
+//            bundle.putInt("tab_item",position);
+//            fragment.setArguments(bundle);
             return fragment;
         }
         @Override
@@ -125,18 +119,49 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         }
     }
 
-    /**
-     * 消息列表数据
-     * @return
-     */
-    private List<MsgBean> setMsgListData(){
-        msgBeanList.clear();
-        msgBeanList.add(new MsgBean("vectoria","["+"online"+"]"));
-        msgBeanList.add(new MsgBean("tomas","["+"offline"+"]"));
-        msgBeanList.add(new MsgBean("peter","["+"online"+"]"));
-        msgBeanList.add(new MsgBean("Alisa","["+"online"+"]"));
-        return msgBeanList;
+    private void initActionBar(){
+        final ActionBar actionBar = getActionBar();
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        setFragmentList();
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                actionBar.setSelectedNavigationItem(position);
+            }
+        });
+
+        for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
+            actionBar.addTab(
+                    actionBar.newTab()
+                            .setText(mSectionsPagerAdapter.getPageTitle(i))
+                            .setTabListener(this));
+        }
+
     }
+
+
+    /**
+     * 页面列表
+     */
+    private List<Fragment> setFragmentList(){
+        fragmentList.clear();
+        fragmentList.add(new MsgFrament());
+        fragmentList.add(new ContactsFrament());
+        fragmentList.add(new LiveRoomFrament());
+        return fragmentList;
+    }
+
+//    @Subscribe
+//    public void onContactsChencged(MessageEvent event){
+//        if(MessageEvent.TAG_ADD_FRIEND_SUCCESS.equals(event.getEventTag())){
+//
+//        }else if(MessageEvent.TAG_DELETE_FRIEND_SUCCESS.equals(event.getEventTag())){
+//
+//        }
+//    }
 
     private void initPopMenu(){
         titlePopup = new TitlePopup(this);

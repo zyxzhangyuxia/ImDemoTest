@@ -255,5 +255,6 @@
     <string name="remove_friend_tip">删除好友后，将同时解除双方的好友关系</string>
     <string name="remove_friend_success">删除好友成功</string>
     <string name="add_friend_verify_tip">好友验证请求</string>
+    <string name="login_fail">登录失败，请检查用户名和密码</string>
 
 </resources>

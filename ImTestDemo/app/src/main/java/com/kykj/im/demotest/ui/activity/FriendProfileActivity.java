@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.kykj.im.demotest.R;
 import com.kykj.im.demotest.cache.DemoCache;
+import com.kykj.im.demotest.cache.MessageEvent;
+import com.kykj.im.demotest.javabean.MsgBean;
 import com.kykj.im.demotest.utils.ToastUtils;
 import com.netease.nim.uikit.cache.FriendDataCache;
 import com.netease.nim.uikit.cache.NimUserInfoCache;
@@ -35,9 +37,12 @@ import com.netease.nimlib.sdk.friend.model.Friend;
 import com.netease.nimlib.sdk.friend.model.MuteListChangedNotify;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.List;
 
 /**
+ * 个人信息页
  * Created by Administrator on 2017/7/4.
  */
 
@@ -309,6 +314,10 @@ public class FriendProfileActivity extends UI {
                         updateUserOperatorView();
                         if (VerifyType.DIRECT_ADD == verifyType) {
                             ToastUtils.showMsg(FriendProfileActivity.this,getResources().getString(R.string.add_friend_success));
+                            MessageEvent event = new MessageEvent();
+                            event.setEventTag(MessageEvent.TAG_ADD_FRIEND_SUCCESS);
+                            event.setObject(account);
+                            EventBus.getDefault().post(event);
                         } else {
                             ToastUtils.showMsg(FriendProfileActivity.this,getResources().getString(R.string.friend_request_success));
                         }
@@ -334,7 +343,7 @@ public class FriendProfileActivity extends UI {
 
     private void onRemoveFriend() {
         if (!NetworkUtil.isNetAvailable(this)) {
-            Toast.makeText(this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
+            ToastUtils.showMsg(FriendProfileActivity.this, getResources().getString(R.string.network_is_not_available));
             return;
         }
         EasyAlertDialog dialog = EasyAlertDialogHelper.createOkCancelDiolag(this, getString(R.string.remove_friend),
@@ -353,7 +362,8 @@ public class FriendProfileActivity extends UI {
                             @Override
                             public void onSuccess(Void param) {
                                 DialogMaker.dismissProgressDialog();
-                                Toast.makeText(FriendProfileActivity.this, R.string.remove_friend_success, Toast.LENGTH_SHORT).show();
+                                EventBus.getDefault().post(new MessageEvent(MessageEvent.TAG_DELETE_FRIEND_SUCCESS,account));
+                                ToastUtils.showMsg(FriendProfileActivity.this, getResources().getString(R.string.remove_friend_success));
                                 finish();
                             }
 
@@ -361,15 +371,16 @@ public class FriendProfileActivity extends UI {
                             public void onFailed(int code) {
                                 DialogMaker.dismissProgressDialog();
                                 if (code == 408) {
-                                    Toast.makeText(FriendProfileActivity.this, R.string.network_is_not_available, Toast.LENGTH_SHORT).show();
+                                    ToastUtils.showMsg(FriendProfileActivity.this, getResources().getString(R.string.network_is_not_available));
                                 } else {
-                                    Toast.makeText(FriendProfileActivity.this, "on failed:" + code, Toast.LENGTH_SHORT).show();
+                                    ToastUtils.showMsg(FriendProfileActivity.this, "on failed:" + code);
                                 }
                             }
 
                             @Override
                             public void onException(Throwable exception) {
                                 DialogMaker.dismissProgressDialog();
+                                ToastUtils.showMsg(FriendProfileActivity.this, "on exception:" + exception.toString());
                             }
                         });
                     }

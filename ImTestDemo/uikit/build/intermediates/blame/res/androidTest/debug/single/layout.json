@@ -28,12 +28,12 @@
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_picker_photo_grid_item.xml"
     },
     {
-        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_menu_item.xml",
-        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout\\design_navigation_menu_item.xml"
-    },
-    {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_team_info_activity.xml",
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_team_info_activity.xml"
+    },
+    {
+        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_easy_alert_dialog_with_listview.xml",
@@ -72,12 +72,12 @@
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_template_media.xml"
     },
     {
-        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_menu_item_action_area.xml",
-        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout\\design_menu_item_action_area.xml"
-    },
-    {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_advanced_team_announce_list_item.xml",
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\bundles\\debug\\res\\layout\\nim_advanced_team_announce_list_item.xml"
+    },
+    {
+        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.0.1\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\nim_advanced_team_announce.xml",

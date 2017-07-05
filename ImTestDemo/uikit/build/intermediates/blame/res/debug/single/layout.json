@@ -68,12 +68,12 @@
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_screen_simple.xml"
-    },
-    {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\abc_screen_simple.xml"
     },
     {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
@@ -108,16 +108,16 @@
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\layout\\nim_zbra_loading_progress_bar.xml"
     },
     {
-        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\layout\\nim_team_info_divider_item.xml",
-        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\layout\\nim_team_info_divider_item.xml"
+        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\layout\\nim_contacts.xml",
+        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\layout\\nim_contacts.xml"
     },
     {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.1\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\layout\\nim_contacts.xml",
-        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\layout\\nim_contacts.xml"
+        "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\layout\\nim_team_info_divider_item.xml",
+        "source": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\res\\layout\\nim_team_info_divider_item.xml"
     },
     {
         "merged": "F:\\vectoria_localcode\\ImTestDemo\\uikit\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",

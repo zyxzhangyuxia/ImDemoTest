@@ -76,6 +76,7 @@ public class AddFriendActivity extends UI {
             public void onSuccess(NimUserInfo user) {
                 DialogMaker.dismissProgressDialog();
                 if (user == null) {
+                    ToastUtils.showMsg(context,context.getResources().getString(R.string.user_not_exsit));
                     EasyAlertDialogHelper.showOneButtonDiolag(AddFriendActivity.this, R.string.user_not_exsit,
                             R.string.user_tips, R.string.ok, false, null);
                 } else { //打开用户详情页
