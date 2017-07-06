@@ -15,8 +15,8 @@
     <string name="login">登录</string>
     <string name="logout">登出 </string>
     <string name="username">用户名</string>
-    <string name="password">    密          码</string>
-    <string name="noregister">没有用户名？点我注册</string>
+    <string name="password">密码</string>
+    <string name="noregister">没有用户名？点击这里去注册</string>
     <string name="empty_username">用户名不能为空</string>
     <string name="empty_pwd">秘密不能为空</string>
     <string name="subtitle">子菜单</string>
@@ -259,5 +259,7 @@
 
     <string name="sendMsg">发送</string>
     <string name="et_hint">请输入文本</string>
+    <string name="user_login">用户登录</string>
+    <string name="help">帮助</string>
 
 </resources>

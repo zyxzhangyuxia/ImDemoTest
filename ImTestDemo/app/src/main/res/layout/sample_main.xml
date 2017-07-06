@@ -1,17 +1,17 @@
 <!-- BEGIN_INCLUDE (view_pager_layout) -->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <include layout="@layout/include_titlebar_layout" />
     <android.support.v4.view.ViewPager
-        android:layout_below="@id/rl_titleBar"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context="com.kykj.demoim.ui.activity.MainActivity" />
+    <include layout="@layout/include_titlebar_layout" />
     <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-</RelativeLayout>
+</FrameLayout>
 
 <!-- END_INCLUDE (view_pager_layout) -->

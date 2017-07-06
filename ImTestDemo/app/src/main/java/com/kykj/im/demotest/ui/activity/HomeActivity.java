@@ -1,15 +1,20 @@
 package com.kykj.im.demotest.ui.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.kykj.im.demotest.cache.DemoCache;
+import com.kykj.im.demotest.config.preference.Preferences;
 import com.kykj.im.demotest.javabean.MessageEvent;
 import com.kykj.im.demotest.presenter.MainPresenter;
 import com.kykj.im.demotest.utils.LogUtil;
+import com.netease.nim.uikit.common.activity.UI;
+import com.netease.nim.uikit.model.ToolBarOptions;
 import com.netease.nim.uikit.permission.MPermission;
 import com.netease.nim.uikit.permission.annotation.OnMPermissionDenied;
 import com.netease.nim.uikit.permission.annotation.OnMPermissionGranted;
@@ -27,7 +32,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/7/4.
  */
 
-public class HomeActivity extends Activity {
+public class HomeActivity extends UI {
 
     @Bind(R.id.btn_login)
     Button btn_login;
@@ -48,6 +53,22 @@ public class HomeActivity extends Activity {
         ButterKnife.bind(this);
         initEventListener();
         EventBus.getDefault().register(this);
+        DemoCache.setMainTaskLaunching(true);
+
+        ToolBarOptions options = new ToolBarOptions();
+        options.titleId = R.string.user_login;
+        setToolBar(R.id.toolbar, options);
+        initActionbar();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(canAutoLogin()){
+            MainPresenter mainPresenter = new MainPresenter(this);
+            mainPresenter.startActivity(this,DemoCache.getAccount(),null,MainActivity.class);
+            finish();
+        }
     }
 
     private void initEventListener() {
@@ -100,5 +121,20 @@ public class HomeActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
+        DemoCache.setMainTaskLaunching(false);
+    }
+
+    private void initActionbar() {
+        TextView toolbarView = findView(R.id.action_bar_right_clickable_textview);
+        toolbarView.setText(R.string.help);
+    }
+    /**
+     * 判断是否自动登录
+     */
+    private boolean canAutoLogin(){
+        String account = Preferences.getUserAccount();
+        String token = Preferences.getUserToken();
+
+        return !TextUtils.isEmpty(account) && !TextUtils.isEmpty(token);
     }
 }

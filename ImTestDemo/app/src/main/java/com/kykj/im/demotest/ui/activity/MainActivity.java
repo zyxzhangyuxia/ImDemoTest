@@ -37,7 +37,6 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
     ImageView iv_menu;
 
-    List<MsgBean> msgBeanList = new ArrayList<>();//消息列表
     List<Fragment> fragmentList = new ArrayList<>();//页面列表
 
     TitlePopup titlePopup;
@@ -166,15 +165,15 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                 ViewGroup.LayoutParams.WRAP_CONTENT);
         // 给标题栏弹窗添加子类
         titlePopup.addAction(new ActionItem(this, R.string.add_friend,
-                R.drawable.ic_launcher));
+                R.drawable.nim_emoji_icon_inactive));
         titlePopup.addAction(new ActionItem(this, R.string.create_chat_group,
-                R.drawable.ic_launcher));
+                R.drawable.nim_message_input_emotion_pressed));
         titlePopup.addAction(new ActionItem(this, R.string.create_high_group,
-                R.drawable.ic_launcher));
+                R.drawable.nim_message_input_emotion));
         titlePopup.addAction(new ActionItem(this, R.string.search_high_group,
-                R.drawable.ic_launcher));
+                R.drawable.nim_message_input_emotion_pressed));
         titlePopup.addAction(new ActionItem(this, R.string.settings,
-                R.drawable.ic_launcher));
+                R.drawable.nim_emoji_icon));
         titlePopup.setItemOnClickListener(new TitlePopup.OnItemOnClickListener() {
             @Override
             public void onItemClick(ActionItem item, int position) {
