@@ -11,14 +11,13 @@ import android.widget.ListView;
 
 import com.kykj.im.demotest.R;
 import com.kykj.im.demotest.adapter.MsgAdapter;
-import com.kykj.im.demotest.cache.MessageEvent;
+import com.kykj.im.demotest.javabean.MessageEvent;
 import com.kykj.im.demotest.javabean.MsgBean;
 import com.kykj.im.demotest.utils.LogUtil;
 import com.kykj.im.demotest.utils.ToastUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.List;

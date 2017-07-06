@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.kykj.im.demotest.R;
 import com.kykj.im.demotest.cache.DemoCache;
-import com.kykj.im.demotest.cache.MessageEvent;
+import com.kykj.im.demotest.javabean.MessageEvent;
 import com.kykj.im.demotest.utils.LogUtil;
 import com.kykj.im.demotest.utils.MD5;
 import com.kykj.im.demotest.utils.ToastUtils;

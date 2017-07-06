@@ -1,4 +1,4 @@
-package com.kykj.im.demotest.cache;
+package com.kykj.im.demotest.javabean;
 
 /**
  * EventBus事件
@@ -9,6 +9,7 @@ public class MessageEvent {
     public static final String TAG_LOGIN_SUCCESS = "tag_login_success";
     public static final String TAG_ADD_FRIEND_SUCCESS = "tag_add_friend_success";
     public static final String TAG_DELETE_FRIEND_SUCCESS = "tag_delete_friend_success";
+    public static final String TAG_NEW_MSG = "tag_new_msg";
 
     private String eventTag;
     private Object object;

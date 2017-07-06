@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.kykj.im.demotest.R;
-import com.kykj.im.demotest.cache.MessageEvent;
 import com.kykj.im.demotest.javabean.MsgBean;
 import com.kykj.im.demotest.presenter.MainPresenter;
 import com.kykj.im.demotest.ui.fragment.ContactsFrament;
@@ -22,9 +21,6 @@ import com.kykj.im.demotest.ui.fragment.MsgFrament;
 import com.kykj.im.demotest.utils.ToastUtils;
 import com.kykj.im.demotest.weight.ActionItem;
 import com.kykj.im.demotest.weight.TitlePopup;
-
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;

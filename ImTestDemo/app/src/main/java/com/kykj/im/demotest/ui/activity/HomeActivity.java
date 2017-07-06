@@ -3,12 +3,11 @@ package com.kykj.im.demotest.ui.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.kykj.im.demotest.cache.MessageEvent;
+import com.kykj.im.demotest.javabean.MessageEvent;
 import com.kykj.im.demotest.presenter.MainPresenter;
 import com.kykj.im.demotest.utils.LogUtil;
 import com.netease.nim.uikit.permission.MPermission;

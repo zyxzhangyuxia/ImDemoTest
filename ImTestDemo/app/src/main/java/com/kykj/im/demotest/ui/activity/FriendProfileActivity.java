@@ -7,13 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.kykj.im.demotest.R;
 import com.kykj.im.demotest.cache.DemoCache;
-import com.kykj.im.demotest.cache.MessageEvent;
-import com.kykj.im.demotest.javabean.MsgBean;
+import com.kykj.im.demotest.javabean.MessageEvent;
+import com.kykj.im.demotest.presenter.MainPresenter;
 import com.kykj.im.demotest.utils.ToastUtils;
+import com.netease.nim.uikit.NimUIKit;
 import com.netease.nim.uikit.cache.FriendDataCache;
 import com.netease.nim.uikit.cache.NimUserInfoCache;
 import com.netease.nim.uikit.common.activity.UI;
@@ -50,6 +50,7 @@ public class FriendProfileActivity extends UI {
 
     private String account;
     private BtnOnclickListener onclickListener;
+    private MainPresenter mainPresenter;
 
 //    private HeadImageView user_head_image;
     private TextView user_name;
@@ -69,7 +70,7 @@ public class FriendProfileActivity extends UI {
         ToolBarOptions options = new ToolBarOptions();
         options.titleId = R.string.user_profile;
         setToolBar(R.id.toolbar, options);
-
+        mainPresenter = new MainPresenter(this);
         account = getIntent().getStringExtra(Extras.EXTRA_ACCOUNT);
         onclickListener = new BtnOnclickListener();
         initActionbar();
@@ -83,7 +84,7 @@ public class FriendProfileActivity extends UI {
 
     private void initActionbar(){
         TextView toolbarView = findView(R.id.action_bar_right_clickable_textview);
-        if (!DemoCache.getAccount().equals(account)) {
+        if ( DemoCache.getAccount() != null && !DemoCache.getAccount().equals(account)) {
             toolbarView.setVisibility(View.GONE);
             return;
         } else {
@@ -391,7 +392,9 @@ public class FriendProfileActivity extends UI {
     }
 
     private void onChat() {
+//        NimUIKit.startP2PSession(this,account);
 //        SessionHelper.startP2PSession(this, account);
+       mainPresenter.startActivity(this,account,null,P2pSessionActivity.class);
     }
 
 }

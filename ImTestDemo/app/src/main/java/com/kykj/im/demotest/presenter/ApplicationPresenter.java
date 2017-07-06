@@ -4,12 +4,18 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Environment;
+import android.text.TextUtils;
 
+import com.kykj.im.demotest.cache.DemoCache;
+import com.kykj.im.demotest.config.preference.Preferences;
+import com.kykj.im.demotest.utils.SystemUtils;
+import com.netease.nim.uikit.NimUIKit;
 import com.netease.nimlib.sdk.SDKOptions;
 import com.netease.nimlib.sdk.StatusBarNotificationConfig;
 import com.netease.nimlib.sdk.auth.LoginInfo;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.uinfo.UserInfoProvider;
+
 
 /**
  * Created by vectoria on 2017/6/27.
@@ -87,6 +93,28 @@ public class ApplicationPresenter {
 
     // 如果已经存在用户登录信息，返回LoginInfo，否则返回null即可
     public LoginInfo loginInfo() {
-        return null;
+        String account = Preferences.getUserAccount();
+        String token = Preferences.getUserToken();
+
+        if (!TextUtils.isEmpty(account) && !TextUtils.isEmpty(token)) {
+            DemoCache.setAccount(account.toLowerCase());
+            return new LoginInfo(account, token);
+        } else {
+            return null;
+        }
+    }
+
+    public boolean isMainProcess(){
+        String packageName = context.getPackageName();
+        String processName = SystemUtils.getProcessName(context);
+        return packageName.equals(processName);
+    }
+
+    /**
+     * 初始化工作
+     */
+    public void initDemoMode(){
+//        DemoInit.init(context);
+        NimUIKit.init(context);
     }
 }

@@ -26,5 +26,10 @@ public class DemoApplication extends Application {
          * 3.一些config
          */
         NIMClient.init(this, presenter.loginInfo(), presenter.options());
+
+        if(presenter.isMainProcess()){
+            //数据初始化  消息，联系人等
+            presenter.initDemoMode();
+        }
     }
 }
